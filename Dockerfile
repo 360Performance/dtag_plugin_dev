@@ -4,7 +4,6 @@ RUN apt-get update
 # install any native plugin dependencies here
 #RUN apt install unixodbc-dev -y
 #RUN pip install pyodbc
-#RUN pip install ExasolDatabaseConnector
 
 
 RUN mkdir /installers
