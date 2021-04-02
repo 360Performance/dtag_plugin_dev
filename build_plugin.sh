@@ -9,7 +9,7 @@
 # - plugin_upload.token - content: plain DT API token with permissions to upload plugins
 
 docker run \
-  -v ${PWD}/plugin_sdk.conf:/opt/dynatrace/remotepluginmodule/agent/conf/plugin_sdk.conf \
+  -v ${PWD}/plugin_sdk.conf:/var/lib/dynatrace/remotepluginmodule/agent/conf/plugin_sdk.conf \
   -v ${PWD}/plugin_upload.token:/opt/dynatrace/remotepluginmodule/agent/conf/plugin_upload.token \
   -v ${PWD}/$(ls -1 -d *_plugin):/plugin \
   -v ${PWD}/plugin_deployment:/opt/dynatrace/remotepluginmodule/plugin_deployment ag_plugindev plugin_sdk build_plugin
