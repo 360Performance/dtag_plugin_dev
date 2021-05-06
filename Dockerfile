@@ -19,6 +19,11 @@ WORKDIR /plugin_sdk
 RUN unzip plugin-sdk-latest.zip
 RUN pip install $(ls -1 plugin_sdk*.whl)
 
+# install optional dependencies
+RUN apt install gcc -y
+RUN apt install unixodbc-dev -y
+RUN pip install pyodbc
+
 RUN mkdir -p /var/lib/dynatrace/remotepluginmodule/agent/conf
 
 RUN mkdir /plugin
