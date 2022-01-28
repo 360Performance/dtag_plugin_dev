@@ -1,4 +1,4 @@
-FROM python:3.6-buster
+FROM python:3.8-buster
 
 RUN apt-get update
 # install any native plugin dependencies here
