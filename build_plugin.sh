@@ -12,7 +12,7 @@ docker run \
   -v ${PWD}/plugin_sdk.conf:/var/lib/dynatrace/remotepluginmodule/agent/conf/plugin_sdk.conf \
   -v ${PWD}/plugin_upload.token:/opt/dynatrace/remotepluginmodule/agent/conf/plugin_upload.token \
   -v ${PWD}/$(ls -1 -d *_plugin):/plugin \
-  -v ${PWD}/plugin_deployment:/plugin/plugin_deployment ag_plugindev plugin_sdk build_plugin
+  -v ${PWD}/plugin_deployment:/opt/dynatrace/remotepluginmodule/plugin_deployment ag_plugindev plugin_sdk build_plugin
 
 
 # upload the build plugin to Active Gate, make sure the user has permissions to create files in the target directory
